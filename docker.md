@@ -38,7 +38,8 @@ vim /usr/lib/systemd/system/docker.service
 /xxx 是存储的目标路径
 ExecStart=/usr/bin/dockerd --graph /xxx -H fd:// --containerd=/run/containerd/containerd.sock
 
-在我们公司的服务器 我将/xxx 设置为/file/gitlab
+在我们公司的文件服务器服务器 我将/xxx 设置为/file/dockers
+
 ```
 7. 启动
 ```

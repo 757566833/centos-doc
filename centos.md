@@ -84,3 +84,14 @@ vim /etc/fstab
 
 
 配置模板：UUID=*************  /xxx  xxx（本教程是ext4）  defaults  1  1
+
+这里有个隐藏的问题   顺序要按照 硬盘顺序 输入 后面1 1 第二个改成2 2   
+也可能是我之前输错了
+
+公司服务器路径  
+文件服务器 第二块硬盘挂载  /file  
+里面分别有ftp svn dockers gitlab
+
+测试服务器  
+第二块挂载 /server
+第三块挂载 /dockers
