@@ -26,7 +26,7 @@ vi /etc/sysconfig/network-script/ifcfg-enp0s3
 ```
 DNS1=114.114.114.114
 DNS2=8.8.8.8
-GTTEWAY=192.168.X.X     //简单来说就是你的路由器ip
+GATEWAY=192.168.X.X     //简单来说就是你的路由器ip
 IPADDR=X.X.X.X          //想设置的静态ip
 NETMASK = 255.255.255.0 //子网掩码
 NM_CONTROLLED=no        //不归nm管  但是好像写不写都无所谓
@@ -80,5 +80,7 @@ mount /dev/sda1 /xxx   xxx是挂载路径
 
 用 blkid  获取磁盘的uuid和属性
 vim /etc/fstab
+
+
 
 配置模板：UUID=*************  /xxx  xxx（本教程是ext4）  defaults  1  1
