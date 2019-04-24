@@ -1,4 +1,4 @@
-1.安装docker
+1. 安装docker
 2. 安装docker-compose
 ```
 curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
@@ -23,13 +23,13 @@ docker-compose up -d
 ```
 8. 改配置（因为我们要放在别的硬盘）
 ```
-//实际上我们只改volumes
+//  实际上我们只改volumes
 vim docker-compose.yml
-// 改这条
+//  改这条
 volumes:
     - /file/gitlab/redis:/var/lib/redis:Z
 
-//后面还有几个 都改掉 前面是宿主机存储位置 后面是 docker存储位置 后面不变 在公司服务器 我将gitlab数据放入了 /file/gitlab下面
+//后面还有几个 都改掉 冒号前面是宿主机存储位置 后面是 docker存储位置 后面不变 在公司服务器 我将gitlab数据放入了 /file/gitlab下面
 ```
 9. 重启
 ```

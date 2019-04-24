@@ -2,8 +2,10 @@ docker-测18.09.5
 1. 查看内核版本
 ```
 uname -r
+
+// 必须高于3.10
 ``` 
-必须高于3.10
+
 2. 删除没鸟用的
 ```
 sudo yum remove docker \
@@ -33,12 +35,12 @@ yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 yum -y install docker-ce
 vim /usr/lib/systemd/system/docker.service
-14行注释掉
-复制一行出来
-/xxx 是存储的目标路径
+// 14行注释掉
+// 复制一行出来
+// /xxx 是docker存储的目标路径
 ExecStart=/usr/bin/dockerd --graph /xxx -H fd:// --containerd=/run/containerd/containerd.sock
 
-在我们公司的文件服务器服务器 我将/xxx 设置为/file/dockers
+// 在我们公司的文件服务器服务器 我将/xxx 设置为/file/dockers
 
 ```
 7. 启动
